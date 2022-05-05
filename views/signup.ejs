@@ -1,0 +1,28 @@
+<%- include("./partials/header") %>
+
+<br>
+<br>
+  <div class="signup1">
+    <div class="form">
+      <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="password" name="adminCode" placeholder="admin code">
+        <input type="number" name="age" placeholder="your age" min="18" max="65" step="1"><br>
+        <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
+        <input id="email" name="email" placeholder="example@domain.com" required="" type="email">
+        <select class="select-style gender" name="gender">
+          <option value="select">i am..</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="others">Other</option>
+        </select><br><br>
+        
+        <button>Submit</button>
+        <p class="message">Have an account? <a href="/login">Login</a></p>
+      </form>
+
+    </div>
+  </div>
+
+<%- include("./partials/footer") %>

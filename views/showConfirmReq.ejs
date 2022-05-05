@@ -1,0 +1,25 @@
+<%- include("./partials/header") %>
+<div>
+    <div class="showDonors">
+        <table class="customers">
+            <tr>
+              <th>Name</th>
+              <th>Blood Group</th>
+              <th>Rh Factor</th>
+              <th>Units</th>
+              <th>Date</th>
+            </tr>
+            <% for(var i=0; i<request.length; i++) { %>
+            <tr>
+              <td><%= request[i].name %></td>
+              <td><%= request[i].bloodGroup %></td>
+              <td><%= request[i].rhFactor %></td>
+              <td><%= request[i].units %> units</td>
+              <td><%= moment(request[i].date).format('MMMM Do YYYY, h:mm:ss a') %></td>
+            </tr>
+            <% } %>
+          </table>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>
